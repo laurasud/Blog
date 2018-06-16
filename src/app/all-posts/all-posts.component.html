@@ -1,0 +1,9 @@
+<div id="list">
+<app-post *ngFor="let data of datas | sort: 'created_at' | paginate: { itemsPerPage: 4, currentPage: p }" [data]="data">
+</app-post>
+</div>
+<div id="div">
+    <pagination-controls class="my-pagination" (click)="Check()" (pageChange)="p = $event"></pagination-controls> 
+</div> 
+<button type="button" [routerLink]="['/create']">Create new</button>  
+

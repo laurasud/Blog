@@ -1,0 +1,16 @@
+h1 {
+    width: 95%;
+    outline: none;
+    font-family: Open Sans;
+	font-size: 48px;
+    padding-bottom: 1%;
+    padding-left: 4%;
+    border-bottom: 3px solid black;
+    margin-bottom: 2%;
+}
+
+h1:hover {
+    color: #2f3033;
+    cursor: pointer;
+}
+

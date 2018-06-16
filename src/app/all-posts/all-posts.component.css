@@ -1,0 +1,31 @@
+#list{
+    height: 300px;
+}
+#div {
+    padding-top: 2.5%;
+    float: left;
+}
+button {
+    float: left;
+    bottom: 0;
+    height:50px;
+    width:108px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-family: Roboto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+button:hover{
+    background-color: #eaebed;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #555555;
+    margin-top: 2%;
+}

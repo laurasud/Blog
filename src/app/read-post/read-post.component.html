@@ -1,0 +1,6 @@
+<div>
+    <h2>{{name}}</h2>
+    <a>Created At: {{created_at | date:"MM/dd/yyyy 'at' h:mma" }}</a><br>
+    <a *ngIf="update">Updated At: {{update | date:"MM/dd/yyyy 'at' h:mma" }}</a><br>
+    <p>{{text}}</p>
+</div>

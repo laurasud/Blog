@@ -1,0 +1,23 @@
+div {
+    margin-left: 4%;
+}
+h2 {
+    font-family: Roboto;
+    font-size: 10 px;
+    font-weight:normal;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+button {
+    height:25px;
+    width:50px;
+    background-color: #555555;
+    border: none;
+    color: white;
+    font-family: Roboto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<div>
+  <form name="form" #Blogform="ngForm">
+    <div>
+      <label>Name of the Post</label><br>
+      <input type="text" name="name" #name="ngModel" minlength=5 maxlength=50 placeholder="e.g. My first post" required [(ngModel)]="nameValue"/>
+    </div>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+      <div *ngIf="name.errors.required">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors.minlength">
+        Name must be at least 5 characters long.
+      </div>
+    </div>
+    <div>
+      <br>
+      <label>Text</label><br>
+      <textarea rows="18" cols="100" type="text" name="text" #text="ngModel" minlength=10 placeholder="e.g. My story" required [(ngModel)]="textValue"></textarea>
+    </div>
+    <div *ngIf="text.invalid && (text.dirty ||text.touched)" class="alert">
+      <div *ngIf="text.errors.required">
+        Text is required.
+      </div>
+      <div *ngIf="text.errors.minlength">
+        Text must be at least 10 characters long.
+      </div>
+    </div>
+    <button type="button" [disabled]="!Blogform.form.valid"  (click)="onCreate(nameValue, textValue)">Create</button>
+  </form>
+</div>

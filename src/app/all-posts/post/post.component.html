@@ -1,0 +1,6 @@
+<div *ngIf="data.show">
+  <h2> {{data.name}} </h2>
+  <button (click)="onView(data.name)">View</button>
+  <button (click)="onUpdate(data.name)">Update</button>
+  <button (click)="onDelete(data.name)">Delete</button>
+<div>

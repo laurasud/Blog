@@ -1,0 +1,19 @@
+<form #Updateform="ngForm">
+  <div>
+    <input type="text" name="name" [(ngModel)]="nameValue" readonly/>
+  </div>
+  <div>
+    <br>
+    <label>Text</label><br>
+    <textarea ref-textarea  #text="ngModel" [(ngModel)]="textValue" rows="18" cols="100" type="text" name="text" placeholder="e.g. My story" minlength=10 required></textarea>
+  </div>
+    <div *ngIf="text.invalid && (text.dirty ||text.touched)" class="alert">
+      <div *ngIf="text.errors.required">
+        Text is required.
+      </div>
+      <div *ngIf="text.errors.minlength">
+        Text must be at least 10 characters long.
+      </div>
+    </div>
+  <button type="button" [disabled]="!Updateform.form.valid" (click)="onSave(textValue)">Save</button>
+</form>
